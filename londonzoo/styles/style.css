@@ -1,0 +1,442 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Helvetica Neue LT Pro Bold";
+    src: url(../fonts/HelveticaNeueLTPro-Bd_0.otf);
+}
+
+@font-face {
+    font-family: "Helvetica Neue LT Pro Black";
+    src: url(../fonts/HelveticaNeueLTPro-Blk.otf);
+}
+
+h1 {
+    font-family: "Helvetica Neue LT Pro Black";
+    font-weight: bold;
+    font-size: 8.5rem;
+    color: #FF4402;
+}
+
+h2 {
+    font-family: "Helvetica Neue LT Pro Bold";
+    font-weight: bold;
+    font-size: 3rem;
+    color: #FF4402;
+}
+
+h3 {
+    font-family: "Helvetica Neue LT Pro Bold";
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+}
+
+p {
+    font-family: "Helvetica Neue LT Pro";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #FF4402;
+    line-height: 1.5;
+}
+
+@keyframes darkmodebody {
+  from {
+   background-color: #FFF6F0;
+  }
+
+  to {
+    background-color: black;
+  }
+}
+
+body {
+    background-color: #FFF6F0;
+    height: 3000px;
+}
+
+body.darkmode {
+    animation-duration: .5s;
+    animation-delay: 1s;
+    animation-name: darkmodebody;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+/*---------------------------------- HEADER ----------------------------------*/
+
+@keyframes darkmodebutton {
+  from {
+   background-image: url(../images/Dark-mode-icon.svg);
+  }
+
+  to {
+    background-image: url(../images/Dark-mode-icon-white.svg);
+  }
+}
+
+body > header > button {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../images/Dark-mode-icon.svg);
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    z-index: 10;
+    transition: .5s;
+}
+
+body > header > button.buttonappear {
+    opacity: 1;
+    transition: .5s;
+}
+
+body > header > button.darkmode {
+    animation-duration: .5s;
+    animation-delay: 1s;
+    animation-name: darkmodebutton;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+body > header > button:hover,
+body > header > button:focus
+{
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+/*---------------------------------- MAIN ----------------------------------*/
+
+main > section {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+main > section:nth-of-type(1) {
+    pointer-events:none;
+    z-index: 10;
+    
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) {
+    height: 2000px;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: auto;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div {
+    height: 5rem;
+    width: 0.3rem;
+    background-color: #FF4402;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) p {
+    width: 20rem;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > div h2,
+main > section:nth-of-type(1) > div:nth-of-type(1) > div > div,
+main > section:nth-of-type(1) > div:nth-of-type(1) > div p {
+    display: inline-block;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+    position: absolute;
+    left: 50%;
+    bottom: 5rem;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) img {
+    width: 10rem;
+    display: block;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) img:nth-of-type(1) {
+    margin-top: -1rem;
+    padding-bottom: 1rem;
+}
+
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/*---------------------------------- ARTWORK ----------------------------------*/
+
+main > section:nth-of-type(2) {
+    width: 100vw;
+}
+
+main > section:nth-of-type(2) > div:nth-of-type(1) {
+    height: 3000px;
+}
+
+main > section:nth-of-type(2) > div:nth-of-type(1) > h3 {
+    text-transform: uppercase;
+    position: absolute;
+}
+
+main > section:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1) {
+    left: 34%;
+    top: 68.5%;
+}
+
+main > section:nth-of-type(2) > div:nth-of-type(1) > svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+main > section:nth-of-type(2) #London_underground,
+main > section:nth-of-type(2) #Overlay_london,
+main > section:nth-of-type(2) #Nose,
+main > section:nth-of-type(2) #Snorharen_Group_1,
+main > section:nth-of-type(2) #Snorharen_Group_2,
+main > section:nth-of-type(2) #Mouth,
+main > section:nth-of-type(2) #Giraffe,
+main > section:nth-of-type(2) #Zoo {
+    opacity: 0;
+    transition: .5s;
+}
+
+main > section:nth-of-type(2) #London_underground.artappear,
+main > section:nth-of-type(2) #Overlay_london.artappear,
+main > section:nth-of-type(2) #Nose.artappear,
+main > section:nth-of-type(2) #Snorharen_Group_1.artappear,
+main > section:nth-of-type(2) #Snorharen_Group_2.artappear,
+main > section:nth-of-type(2) #Mouth.artappear,
+main > section:nth-of-type(2) #Zoo.artappear {
+    opacity: 1;
+    transition: .5s;
+}
+
+main > section:nth-of-type(2) #London_underground.darkmode,
+main > section:nth-of-type(2) #Overlay_london.darkmode,
+main > section:nth-of-type(2) #Nose.darkmode,
+main > section:nth-of-type(2) #Snorharen_Group_1.darkmode,
+main > section:nth-of-type(2) #Snorharen_Group_2.darkmode,
+main > section:nth-of-type(2) #Mouth.darkmode,
+main > section:nth-of-type(2) #Zoo.darkmode {
+    fill: #FFF6F0;
+    transition: .5s;
+}
+
+main > section:nth-of-type(2) #Even {
+    transform: translate(-100vw, 0px);
+    fill: #FDE7D8;
+}
+
+main > section:nth-of-type(2) #Oneven {
+    transform: translate(100vw, 0px);
+    fill: #FF4402;
+}
+
+main > section:nth-of-type(2) #Even:hover {
+    fill: black;
+}
+
+main > section:nth-of-type(2) #Even.darkmode {
+    fill: black;
+    transition: .5s;
+}
+
+main > section:nth-of-type(2) #Oneven.darkmode {
+    fill: #FFF6F0;
+    transition: .5s;
+}
+
+/*---------------------------------- GIRAFFE ----------------------------------*/
+
+@keyframes giraffeanimation {
+  0% {
+   transform: rotate(30deg);
+      opacity: 0;
+  }
+
+  100% {
+    transform: rotate(0deg);
+      opacity: 1;
+  }
+}
+
+main > section:nth-of-type(2) #London_underground:hover {
+    transition: .5s;
+    fill: #FF4402;
+}
+
+main > section:nth-of-type(2) #Giraffe {
+    transform-origin: 55rem 26rem;
+}
+
+main > section:nth-of-type(2) #Giraffe.giraffeanimation {
+    transform: rotate(30deg);
+    animation-delay: .5s;
+    animation-duration: .5s;
+
+    animation-name: giraffeanimation;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
