@@ -10,6 +10,8 @@ var intro = document.querySelector('main > section:nth-of-type(1) > div:nth-of-t
 var docHeight = intro.offsetHeight;
 
 var artwork = document.querySelector('main > section:nth-of-type(2) > div:nth-of-type(1)');
+var artworkText1 = document.querySelector('main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1)');
+var artworkText2 = document.querySelector('main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2)');
 var docHeight2 = artwork.offsetHeight;
 
 //ARTWORK ELEMENTEN
@@ -23,6 +25,17 @@ var artworkEl7 = document.querySelector('main > section:nth-of-type(2) #Zoo');
 var artworkEl8 = document.querySelector('main > section:nth-of-type(2) #Even');
 var artworkEl9 = document.querySelector('main > section:nth-of-type(2) #Oneven');
 var artworkEl10 = document.querySelector('main > section:nth-of-type(2) #Giraffe');
+
+var artworkEl11 = document.querySelector('main > section:nth-of-type(2) #Oneven_13');
+var artworkEl12 = document.querySelector('main > section:nth-of-type(2) #Oneven_14');
+var artworkEl13 = document.querySelector('main > section:nth-of-type(2) #Oneven_15');
+var artworkEl14 = document.querySelector('main > section:nth-of-type(2) #Oneven_17');
+var artworkEl15 = document.querySelector('main > section:nth-of-type(2) #Oneven_18');
+
+var noseGroup1 = document.querySelector('main > section:nth-of-type(2) #Snorharen_Group_1');
+var noseGroup1Detail1 = document.querySelector('main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_1');
+var noseGroup1Detail2 = document.querySelector('main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_2');
+var noseGroup1Detail3 = document.querySelector('main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_3');
 
 //DARK MODE
 var body = document.querySelector('body');
@@ -45,6 +58,9 @@ window.addEventListener('load', function () {
 
         var scrolledOneven = -window.scrollY / (docHeight2 - window.innerHeight) * 100 + 100;
         var translateValueOneven = 'translate(' + scrolledOneven + 'vw,0px)';
+        
+//         var scrolledText = window.scrollY / (docHeight2 - window.innerHeight) * 100 - 100;
+//        var translateValueText = 'translate(' + scrolledText + 'vw,0px)';
 
         //      console.log(scrolled);
         //      console.log(blurValue);
@@ -60,6 +76,9 @@ window.addEventListener('load', function () {
 
         Even.style.transform = translateValueEven;
         Oneven.style.transform = translateValueOneven;
+        
+//        artworkText1.style.transform = translateValueText;
+//        artworkText2.style.transform = translateValueText;
 
     }, false);
 
@@ -78,6 +97,15 @@ window.addEventListener("scroll", function(){
       artworkEl7.classList.add("artappear");
       
       darkModeButton.classList.add("buttonappear");
+      
+      artworkText1.classList.add("artappear");
+      artworkText2.classList.add("artappear");
+      
+      artworkEl11.classList.add("staartanimation");
+      artworkEl12.classList.add("staartanimation");
+      artworkEl13.classList.add("staartanimation");
+      artworkEl14.classList.add("staartanimation");
+      artworkEl15.classList.add("staartanimation");
       }
     
     else {
@@ -90,6 +118,15 @@ window.addEventListener("scroll", function(){
       artworkEl7.classList.remove("artappear");
         
         darkModeButton.classList.remove("buttonappear");
+        
+        artworkText1.classList.remove("artappear");
+      artworkText2.classList.remove("artappear");
+        
+        artworkEl11.classList.remove("staartanimation");
+      artworkEl12.classList.remove("staartanimation");
+      artworkEl13.classList.remove("staartanimation");
+      artworkEl14.classList.remove("staartanimation");
+      artworkEl15.classList.remove("staartanimation");
     }
     
 },false);
@@ -129,10 +166,19 @@ function giraffeModeOff() {
     artworkEl10.classList.remove("giraffeanimation");
 }
 
+function noseMode() {
+    noseGroup1.classList.add("nosemode");
+    noseGroup1Detail1.classList.add("nosemode");
+    noseGroup1Detail2.classList.add("nosemode");
+    noseGroup1Detail3.classList.add("nosemode");
+}
+
 
 darkModeButton.addEventListener("mouseover", darkMode);
 darkModeButton.addEventListener("mouseout", lightMode);
 
-artworkEl1.addEventListener("mouseover", giraffeMode);
+artworkEl1.addEventListener("click", giraffeMode);
 artworkEl1.addEventListener("mouseout", giraffeModeOff);
+
+artworkEl3.addEventListener("click", noseMode);
 

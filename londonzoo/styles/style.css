@@ -332,22 +332,42 @@ main > section:nth-of-type(2) > div:nth-of-type(1) {
     height: 3000px;
 }
 
-main > section:nth-of-type(2) > div:nth-of-type(1) > h3 {
+main > section:nth-of-type(2) > div:nth-of-type(1) > div {    
+    display: grid;
+        grid-template-columns: repeat(5, 20vw);
+    grid-template-rows: repeat(5, 20vh);
+}
+
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > svg {    
+        grid-column: 3;
+    grid-row: 1 / -1;
+    width: 50rem;
+    align-self: center;
+    justify-self: center;
+}
+
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3 {
     text-transform: uppercase;
-    position: absolute;
 }
 
-main > section:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1) {
-    left: 34%;
-    top: 68.5%;
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 4;
+    justify-self: end;
+    margin-top: 2.5rem;
+/*    transform: translate(-100vw, 0px);*/
+    opacity: 0;
+     transition: .5s;
 }
 
-main > section:nth-of-type(2) > div:nth-of-type(1) > svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2) {
+grid-column: 3;
+    grid-row: 4;
+    align-self: end;
+    justify-self: start;
+/*    transform: translate(-100vw, 0px);*/
+    opacity: 0;
+     transition: .5s;
 }
 
 main > section:nth-of-type(2) #London_underground,
@@ -368,7 +388,9 @@ main > section:nth-of-type(2) #Nose.artappear,
 main > section:nth-of-type(2) #Snorharen_Group_1.artappear,
 main > section:nth-of-type(2) #Snorharen_Group_2.artappear,
 main > section:nth-of-type(2) #Mouth.artappear,
-main > section:nth-of-type(2) #Zoo.artappear {
+main > section:nth-of-type(2) #Zoo.artappear, 
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1).artappear, 
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2).artappear{
     opacity: 1;
     transition: .5s;
 }
@@ -394,8 +416,156 @@ main > section:nth-of-type(2) #Oneven {
     fill: #FF4402;
 }
 
-main > section:nth-of-type(2) #Even:hover {
-    fill: black;
+main > section:nth-of-type(2) #Even_1,
+main > section:nth-of-type(2) #Even_2,
+main > section:nth-of-type(2) #Even_3,
+main > section:nth-of-type(2) #Even_4,
+main > section:nth-of-type(2) #Even_5,
+main > section:nth-of-type(2) #Even_6,
+main > section:nth-of-type(2) #Even_7,
+main > section:nth-of-type(2) #Even_8,
+main > section:nth-of-type(2) #Even_9,
+main > section:nth-of-type(2) #Even_10,
+main > section:nth-of-type(2) #Even_11,
+main > section:nth-of-type(2) #Even_12,
+main > section:nth-of-type(2) #Even_13,
+main > section:nth-of-type(2) #Even_14,
+main > section:nth-of-type(2) #Even_15,
+main > section:nth-of-type(2) #Oneven_1,
+main > section:nth-of-type(2) #Oneven_2,
+main > section:nth-of-type(2) #Oneven_3,
+main > section:nth-of-type(2) #Oneven_4,
+main > section:nth-of-type(2) #Oneven_5,
+main > section:nth-of-type(2) #Oneven_6,
+main > section:nth-of-type(2) #Oneven_7,
+main > section:nth-of-type(2) #Oneven_8,
+main > section:nth-of-type(2) #Oneven_9,
+main > section:nth-of-type(2) #Oneven_10, 
+main > section:nth-of-type(2) #Oneven_11,
+main > section:nth-of-type(2) #Oneven_12,
+main > section:nth-of-type(2) #Oneven_13,
+main > section:nth-of-type(2) #Oneven_14,
+main > section:nth-of-type(2) #Oneven_15,
+main > section:nth-of-type(2) #Oneven_16,
+main > section:nth-of-type(2) #Oneven_17,
+main > section:nth-of-type(2) #Oneven_18{
+    transform: translate(0vw, 0px);
+    transform-origin:center;
+    transition: .5s;
+}
+
+main > section:nth-of-type(2) #Even_1:hover,
+main > section:nth-of-type(2) #Even_2:hover,
+main > section:nth-of-type(2) #Even_3:hover,
+main > section:nth-of-type(2) #Even_4:hover,
+main > section:nth-of-type(2) #Even_5:hover,
+main > section:nth-of-type(2) #Even_6:hover,
+main > section:nth-of-type(2) #Even_7:hover,
+main > section:nth-of-type(2) #Even_8:hover,
+main > section:nth-of-type(2) #Even_10:hover {
+    fill: #FF4402;
+    transform: translate(2vw, 0px);
+}
+
+main > section:nth-of-type(2) #Oneven_1:hover,
+main > section:nth-of-type(2) #Onevenn_2:hover,
+main > section:nth-of-type(2) #Oneven_3:hover,
+main > section:nth-of-type(2) #Oneven_4:hover,
+main > section:nth-of-type(2) #Oneven_5:hover,
+main > section:nth-of-type(2) #Oneven_6:hover,
+main > section:nth-of-type(2) #Oneven_7:hover,
+main > section:nth-of-type(2) #Oneven_8:hover,
+main > section:nth-of-type(2) #Oneven_9:hover,
+main > section:nth-of-type(2) #Oneven_10:hover,
+main > section:nth-of-type(2) #Oneven_11:hover,
+main > section:nth-of-type(2) #Oneven_12:hover{
+    fill: #FDE7D8;
+    transform: translate(2vw, 0px);
+}
+
+@keyframes staart-animation-links {
+    0% {
+        transform: translate(0vw, 0px);
+    }
+    
+    50% {
+        transform: translate(-1vw, 0px);
+    }
+    
+    100% {
+        transform: translate(0vw, 0px);
+    }
+}
+
+@keyframes staart-animation-rechts {
+    0% {
+        transform: translate(0vw, 0px);
+    }
+    
+    50% {
+        transform: translate(1vw, 0px);
+    }
+    
+    100% {
+        transform: translate(0vw, 0px);
+    }
+}
+
+@keyframes staart-animation-up {
+    0% {
+        transform: translate(0vw, 0vw);
+    }
+    
+    50% {
+        transform: translate(0vw, -1vw);
+    }
+    
+    100% {
+        transform: translate(0vw, 0vw);
+    }
+}
+
+@keyframes staart-animation-down {
+    0% {
+        transform: translate(0vw, 0vw);
+    }
+    
+    50% {
+        transform: translate(0vw, 1vw);
+    }
+    
+    100% {
+        transform: translate(0vw, 0vw);
+    }
+}
+
+ main > section:nth-of-type(2) #Oneven_13.staartanimation,
+main > section:nth-of-type(2) #Oneven_15.staartanimation {
+    animation-name: staart-animation-links;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+main > section:nth-of-type(2) #Oneven_14.staartanimation {
+    animation-name: staart-animation-rechts;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+main > section:nth-of-type(2) #Oneven_17.staartanimation {
+    animation-name: staart-animation-down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+main > section:nth-of-type(2) #Oneven_18.staartanimation {
+    animation-name: staart-animation-up;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 main > section:nth-of-type(2) #Even.darkmode {
@@ -408,7 +578,7 @@ main > section:nth-of-type(2) #Oneven.darkmode {
     transition: .5s;
 }
 
-/*---------------------------------- GIRAFFE ----------------------------------*/
+/*---------------------------------- GIRAFFE MODE ----------------------------------*/
 
 @keyframes giraffeanimation {
   0% {
@@ -439,4 +609,50 @@ main > section:nth-of-type(2) #Giraffe.giraffeanimation {
     animation-name: giraffeanimation;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
+}
+
+/*---------------------------------- NOSE MODE ----------------------------------*/
+
+main > section:nth-of-type(2) #Snorharen_Group_1 {
+        transform: translate(0vw, 0px) rotate(0deg);
+    transform-origin: 33rem 10rem;
+    transition: .5s
+}
+
+main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_3 {
+    transform: rotate(0deg);
+        transform-origin: 32rem 11rem;
+    transition: .5s
+}
+
+main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_2{
+    transform: rotate(0deg);
+        transform-origin: 30rem 0rem;
+    transition: .5s
+}
+
+main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_1 {
+        transform: rotate(0deg);
+    transform-origin: 32rem 12rem;
+    transition: .5s
+}
+
+main > section:nth-of-type(2) #Snorharen_Group_1.nosemode {
+        transform: translate(-2vw, 0px) rotate(-20deg);
+    transform-origin: 33rem 10rem;
+}
+
+main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_3.nosemode {
+    transform: rotate(20deg);
+        transform-origin: 32rem 11rem;
+}
+
+main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_2.nosemode {
+    transform: rotate(0deg);
+        transform-origin: 30rem 0rem;
+}
+
+main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_1.nosemode {
+        transform: rotate(-20deg);
+    transform-origin: 32rem 12rem;
 }
