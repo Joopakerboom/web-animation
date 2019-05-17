@@ -41,6 +41,7 @@ var noseGroup1Detail3 = document.querySelector('main > section:nth-of-type(2) #S
 var body = document.querySelector('body');
 var darkModeButton = document.querySelector('body > header > button');
 
+// bron hier
 window.addEventListener('load', function () {
     window.addEventListener('scroll', function () {
         // normalize scroll position as percentage
