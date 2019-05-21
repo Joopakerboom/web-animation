@@ -200,6 +200,42 @@ body.darkmode {
     animation-timing-function: ease-in-out;
 }
 
+/*---------------------------------- INTRO ANIMATIE ----------------------------------*/
+
+@keyframes introtitel {
+  from {
+   width: 60%;
+      opacity: 0;
+  }
+
+  to {
+    width: 45%;
+      opacity: 1;
+  }
+}
+
+@keyframes introtitelzoo {
+  from {
+   bottom: 0rem;
+      opacity: 0;
+  }
+
+  to {
+    bottom: 5rem;
+      opacity: 1;
+  }
+}
+
+@keyframes introbushes {
+  from {
+   bottom: -50%;
+  }
+
+  to {
+    bottom: 0%;
+  }
+}
+
 /*---------------------------------- HEADER ----------------------------------*/
 
 @keyframes darkmodebutton {
@@ -251,6 +287,23 @@ body > header > button:focus
     transition: .5s;
 }
 
+body > header div:nth-of-type(1) {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 1rem;
+}
+
+body > header div:nth-of-type(1) img, 
+body > header div:nth-of-type(1) h3 {
+    display: inline-block; 
+}
+
+body > header div:nth-of-type(1) img {
+    fill: black;
+    height: 1rem;
+}
+
 /*---------------------------------- MAIN ----------------------------------*/
 
 main > section {
@@ -276,10 +329,22 @@ main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
     flex-wrap: nowrap;
     align-items: center;
     height: auto;
-    width: 45%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
+    opacity: 1;
+    
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-name: introtitel;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
 }
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) h2{
+    width: 45%;
+    text-align: right;
+    }
 
 main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div {
     height: 5rem;
@@ -288,7 +353,7 @@ main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div {
 }
 
 main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) p {
-    width: 20rem;
+    width: 45%;
 }
 
 main > section:nth-of-type(1) > div:nth-of-type(1) > div h2,
@@ -303,6 +368,13 @@ main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
     bottom: 5rem;
     transform: translateX(-50%);
     text-align: center;
+    opacity: 1;
+    
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-name: introtitelzoo;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
 }
 
 main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) img {
@@ -318,8 +390,14 @@ main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) img:nth-
 
 main > section:nth-of-type(1) > div:nth-of-type(1) > img {
     position: absolute;
-    bottom: 0;
+    bottom: -50%;
     width: 100%;
+    
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-name: introbushes;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 /*---------------------------------- ARTWORK ----------------------------------*/
@@ -404,6 +482,28 @@ main > section:nth-of-type(2) #Mouth.darkmode,
 main > section:nth-of-type(2) #Zoo.darkmode {
     fill: #FFF6F0;
     transition: .5s;
+}
+
+@keyframes ogenanimatie {
+    0% {
+        fill: inherit;
+    }
+    
+    50% {
+        fill: black;
+    }
+    
+    100% {
+       fill: #ffdd00; 
+    }
+}
+
+main > section:nth-of-type(2) #Oneven_4.darkmode,
+main > section:nth-of-type(2) #Oneven_5.darkmode{
+    animation-name: ogenanimatie;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 main > section:nth-of-type(2) #Even {
@@ -570,12 +670,10 @@ main > section:nth-of-type(2) #Oneven_18.staartanimation {
 
 main > section:nth-of-type(2) #Even.darkmode {
     fill: black;
-    transition: .5s;
 }
 
 main > section:nth-of-type(2) #Oneven.darkmode {
     fill: #FFF6F0;
-    transition: .5s;
 }
 
 /*---------------------------------- GIRAFFE MODE ----------------------------------*/
@@ -592,9 +690,31 @@ main > section:nth-of-type(2) #Oneven.darkmode {
   }
 }
 
+@keyframes londonundergroundanimation {
+  0% {
+   transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
 main > section:nth-of-type(2) #London_underground:hover {
     transition: .5s;
     fill: #FF4402;
+}
+
+main > section:nth-of-type(2) #London_underground {
+        transform-origin: 55.8% 57.5%;
+}
+
+main > section:nth-of-type(2) #London_underground.giraffeanimation {
+    animation-duration: 1s;
+
+    animation-name: londonundergroundanimation;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
 }
 
 main > section:nth-of-type(2) #Giraffe {
@@ -613,46 +733,170 @@ main > section:nth-of-type(2) #Giraffe.giraffeanimation {
 
 /*---------------------------------- NOSE MODE ----------------------------------*/
 
+@keyframes noseanimation{
+    0% {
+         transform: translate(0vw, 0px);
+    }
+    
+    50% {
+         transform: translate(-1vw, 0px);
+    }
+    
+     100% {
+         transform: translate(0vw, 0px);
+    }
+    
+}
+
+main > section:nth-of-type(2) #Nose.nosemode {
+    animation-duration: .5s;
+    animation-name: noseanimation;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+}
+
 main > section:nth-of-type(2) #Snorharen_Group_1 {
         transform: translate(0vw, 0px) rotate(0deg);
-    transform-origin: 33rem 10rem;
     transition: .5s
 }
 
-main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_3 {
-    transform: rotate(0deg);
-        transform-origin: 32rem 11rem;
-    transition: .5s
-}
-
-main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_2{
-    transform: rotate(0deg);
-        transform-origin: 30rem 0rem;
-    transition: .5s
-}
-
-main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_1 {
-        transform: rotate(0deg);
-    transform-origin: 32rem 12rem;
+main > section:nth-of-type(2) #Snorharen_Group_2 {
+        transform: translate(0vw, 0px) rotate(0deg);
     transition: .5s
 }
 
 main > section:nth-of-type(2) #Snorharen_Group_1.nosemode {
-        transform: translate(-2vw, 0px) rotate(-20deg);
-    transform-origin: 33rem 10rem;
+    transform: translate(-2vw, 0px);
 }
 
-main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_3.nosemode {
-    transform: rotate(20deg);
-        transform-origin: 32rem 11rem;
+main > section:nth-of-type(2) #Snorharen_Group_2.nosemode {
+    transform: translate(2vw, 0px);
 }
 
-main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_2.nosemode {
-    transform: rotate(0deg);
-        transform-origin: 30rem 0rem;
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > div {
+        width: 0rem;
+    height: 0rem;
+    background-color: #ffdd00;
+    border-radius: 100%;
+    
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    z-index: -10;
+    transition: .5s
 }
 
-main > section:nth-of-type(2) #Snorharen_Group_1 > #Snorharen_1.nosemode {
-        transform: rotate(-20deg);
-    transform-origin: 32rem 12rem;
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > div.nosemode {
+        width: 25rem;
+    height: 25rem;
+}
+
+
+/*---------------------------------- ZOO MODE ----------------------------------*/
+
+@keyframes zoo-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+main > section:nth-of-type(2) #Zoo1 {
+    transform-origin: 47% 81%;
+}
+
+main > section:nth-of-type(2) #Zoo2 {
+    transform-origin: 55.5% 81%;
+}
+
+main > section:nth-of-type(2) #Zoo1.zoorotation {
+    animation-name: zoo-rotation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 47% 81%;
+}
+
+main > section:nth-of-type(2) #Zoo2.zoorotation {
+    animation-name: zoo-rotation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 55.5% 81%;
+}
+
+main > section:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(2) {
+    display: none;
+}
+
+/*---------------------------------- MEDIA QUERIES ----------------------------------*/
+
+@media screen and (max-width: 25em) {
+    
+    /*- HEADER -*/
+    body > header div:nth-of-type(1) {
+        text-align: center;
+    }
+    
+    body > header div:nth-of-type(1) img {
+        margin-bottom: .5rem;
+    }
+    
+    /*- INTROSECTION -*/
+    
+  main > section:nth-of-type(1) > div:nth-of-type(1) > img {
+    width: 200%;
+  }
+    
+    main > section:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(2) {
+        width: 200%;
+    display: block;
+        right: 0;
+}
+    
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+    flex-wrap: wrap;
+    text-align: center;
+    width: auto;
+    flex-direction: column;
+    }
+    
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) h2 {
+        width: auto;
+    text-align: center;
+    }
+    
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div {
+    height: .3rem;
+    width: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    }
+    
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) p {
+    width: 75%;
+    }
+    
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) h1 {
+            font-size: 6.5rem;
+    }
+    
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) img {
+            width: 6.5rem;
+    }
 }

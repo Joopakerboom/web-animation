@@ -1,51 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>London Zoo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-
-<body>
-
-   <header>
-   <button></button>
-   
-   <div>
-   <img src="images/london-underground-logo-black.svg" alt="">
-   <h3>Underground to Baker Street, then Bus 74</h3>
-   </div>
-   </header>
-   
-    <main>
-
-        <section>
-           <div>
-            <div>
-                <h2>Abram Games</h2>
-                <div></div>
-                <p>An international place for animals to be seen.
-                    Made by Abram Games, after the second world war.</p>
-            </div>
-
-            <div>
-                <h1>Z</h1>
-                <img src="images/london-underground-logo.svg" alt="">
-                <img src="images/london-underground-logo.svg" alt="">
-            </div>
-
-            <img src="images/bushes.svg" alt="">
-            <img src="images/bushes.svg" alt="">
-            </div>
-        </section>
-
-        <section>
-           <div>
-           <div>
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1280 850" style="enable-background:new 0 0 1280 850;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#D6D7DD;}
+	.st1{fill:#FDE7D8;}
+	.st2{fill:#FF4402;}
+</style>
 <g id="Tijger">
 	<g id="Snorharen_Group_2">
 		<rect id="Snorharen_6" x="755.2" y="193.2" class="st0" width="62.6" height="3.7"/>
@@ -159,17 +120,3 @@
 	</g>
 </g>
 </svg>
-                <div></div>
-           
-            <h3>London</h3>
-           <h3>Regent's Park</h3>
-           </div>
-            </div>
-        </section>
-
-    </main>
-
-    <script src="js/zoom.js"></script>
-</body>
-
-</html>
