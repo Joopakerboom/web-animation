@@ -92,6 +92,12 @@ window.addEventListener('load', function () {
         var scrolledOneven = -window.scrollY / (docHeight2 - window.innerHeight) * 100 + 100;
         var translateValueOneven = 'translate(' + scrolledOneven + 'vw,0px)';
         
+        var scrolledEvenMobile = window.scrollY / (docHeight2 - window.innerHeight) * 150 - 150;
+        var translateValueEvenMobile = 'translate(' + scrolledEvenMobile + 'vw,0px)';
+
+        var scrolledOnevenMobile = -window.scrollY / (docHeight2 - window.innerHeight) * 150 + 150;
+        var translateValueOnevenMobile = 'translate(' + scrolledOnevenMobile + 'vw,0px)';
+        
 //         var scrolledText = window.scrollY / (docHeight2 - window.innerHeight) * 100 - 100;
 //        var translateValueText = 'translate(' + scrolledText + 'vw,0px)';
 
@@ -108,8 +114,20 @@ window.addEventListener('load', function () {
         Info1.style.opacity = opacityValue;
         Info2.style.opacity = opacityValue;
 
+        if (window.screen.width < 500) {
+        Even.style.transform = translateValueEvenMobile;
+        Oneven.style.transform = translateValueOnevenMobile;
+            }
+        
+//        if (window.screen.width < 720) {
+//        Even.style.transform = translateValueEven;
+//        Oneven.style.transform = translateValueOneven;
+//        }
+        
+        if (window.screen.width > 720) {
         Even.style.transform = translateValueEven;
         Oneven.style.transform = translateValueOneven;
+        }
         
 //        artworkText1.style.transform = translateValueText;
 //        artworkText2.style.transform = translateValueText;
@@ -118,9 +136,10 @@ window.addEventListener('load', function () {
 
 }, false);
 
-
 window.addEventListener("scroll", function(){
-  if (window.pageYOffset >= 2300){
+    var hoogte = window.pageYOffset + window.innerHeight;
+//    console.log(hoogte);
+  if (hoogte == docHeight2){
       artworkEl1.classList.add("artappear");
       artworkEl2.classList.add("artappear");
       artworkEl3.classList.add("artappear");
@@ -140,29 +159,7 @@ window.addEventListener("scroll", function(){
       artworkEl14.classList.add("staartanimation");
       artworkEl15.classList.add("staartanimation");
       }
-//    
-//     if (window.screen.width <= 1024 && window.pageYOffset >= 2150){
-//         console.log("check1");
-//      artworkEl1.classList.add("artappear");
-//      artworkEl2.classList.add("artappear");
-//      artworkEl3.classList.add("artappear");
-//      artworkEl4.classList.add("artappear");
-//      artworkEl5.classList.add("artappear");
-//      artworkEl6.classList.add("artappear");
-//      artworkEl7.classList.add("artappear");
-//      
-//      darkModeButton.classList.add("buttonappear");
-//      
-//      artworkText1.classList.add("artappear");
-//      artworkText2.classList.add("artappear");
-//      
-//      artworkEl11.classList.add("staartanimation");
-//      artworkEl12.classList.add("staartanimation");
-//      artworkEl13.classList.add("staartanimation");
-//      artworkEl14.classList.add("staartanimation");
-//      artworkEl15.classList.add("staartanimation");
-//      }
-    
+
     else {
         artworkEl1.classList.remove("artappear");
       artworkEl2.classList.remove("artappear");
@@ -199,6 +196,9 @@ function darkMode() {
     artworkEl8.classList.add("darkmode");
     artworkEl9.classList.add("darkmode");
     
+    artworkText1.classList.add("darkmode");
+    artworkText2.classList.add("darkmode");
+    
     oogLinks.classList.add("darkmode");
     oogRechts.classList.add("darkmode");
 }
@@ -214,6 +214,9 @@ function lightMode() {
     artworkEl7.classList.remove("darkmode");
     artworkEl8.classList.remove("darkmode");
     artworkEl9.classList.remove("darkmode");
+    
+    artworkText1.classList.remove("darkmode");
+    artworkText2.classList.remove("darkmode");
     
     oogLinks.classList.remove("darkmode");
     oogRechts.classList.remove("darkmode");
@@ -258,15 +261,32 @@ function noseMode() {
 },1000);
 }
 
+var keydownSide = 1;
+
 window.addEventListener('keydown', function(e) {
-    if (e.keyCode === 32) {
-        zooInhoud1.classList.add("zoorotation");
-        zooInhoud2.classList.add("zoorotation");
+//    if (e.keyCode === 37) {
+//        Even.style.transform = `translate(-${keydownSide++}vw)`;
+//        
+//    }
+    
+    if (e.keyCode === 37) {
+        zooInhoud1.classList.add("zoorotationlinks");
+        zooInhoud2.classList.add("zoorotationlinks");  
+        
+        setTimeout(function(){
+   zooInhoud1.classList.remove("zoorotationlinks");
+        zooInhoud2.classList.remove("zoorotationlinks");
+},1500);
     }
     
-    if (e.keyCode === 8) {
-        zooInhoud1.classList.remove("zoorotation");
-        zooInhoud2.classList.remove("zoorotation");
+    if (e.keyCode === 39) {
+        zooInhoud1.classList.add("zoorotationrechts");
+        zooInhoud2.classList.add("zoorotationrechts");
+        
+        setTimeout(function(){
+   zooInhoud1.classList.remove("zoorotationrechts");
+        zooInhoud2.classList.remove("zoorotationrechts");
+},1500);
     }
 }, false);
 
