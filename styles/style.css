@@ -178,13 +178,13 @@ p {
 }
 
 @keyframes darkmodebody {
-  from {
-   background-color: #FFF6F0;
-  }
+    from {
+        background-color: #FFF6F0;
+    }
 
-  to {
-    background-color: black;
-  }
+    to {
+        background-color: black;
+    }
 }
 
 body {
@@ -203,49 +203,49 @@ body.darkmode {
 /*---------------------------------- INTRO ANIMATIE ----------------------------------*/
 
 @keyframes introtitel {
-  from {
-   width: 36rem;
-      opacity: 0;
-  }
+    from {
+        width: 36rem;
+        opacity: 0;
+    }
 
-  to {
-    width: 33rem;
-      opacity: 1;
-  }
+    to {
+        width: 33rem;
+        opacity: 1;
+    }
 }
 
 @keyframes introtitelzoo {
-  from {
-   bottom: 0rem;
-      opacity: 0;
-  }
+    from {
+        bottom: 0rem;
+        opacity: 0;
+    }
 
-  to {
-    bottom: 5rem;
-      opacity: 1;
-  }
+    to {
+        bottom: 5rem;
+        opacity: 1;
+    }
 }
 
 @keyframes introbushes {
-  from {
-   bottom: -50%;
-  }
+    from {
+        bottom: -50%;
+    }
 
-  to {
-    bottom: 0%;
-  }
+    to {
+        bottom: 0%;
+    }
 }
 
 /*---------------------------------- HEADER ----------------------------------*/
 
 @keyframes darkmodebutton {
-  from {
-   background-image: url(../images/Dark-mode-icon.svg);
-  }
+    from {
+        background-image: url(../images/Dark-mode-icon.svg);
+    }
 
-  to {
-    background-image: url(../images/Dark-mode-icon-white.svg);
-  }
+    to {
+        background-image: url(../images/Dark-mode-icon-white.svg);
+    }
 }
 
 body > header > button {
@@ -281,8 +281,7 @@ body > header > button.darkmode {
 }
 
 body > header > button:hover,
-body > header > button:focus
-{
+body > header > button:focus {
     transform: rotate(180deg);
     transition: .5s;
 }
@@ -294,9 +293,9 @@ body > header div:nth-of-type(1) {
     bottom: 1rem;
 }
 
-body > header div:nth-of-type(1) img, 
+body > header div:nth-of-type(1) img,
 body > header div:nth-of-type(1) h3 {
-    display: inline-block; 
+    display: inline-block;
 }
 
 body > header div:nth-of-type(1) img {
@@ -313,9 +312,9 @@ main > section {
 }
 
 main > section:nth-of-type(1) {
-    pointer-events:none;
+    pointer-events: none;
     z-index: 10;
-    
+
 }
 
 main > section:nth-of-type(1) > div:nth-of-type(1) {
@@ -334,7 +333,7 @@ main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
     margin-left: auto;
     margin-right: auto;
     opacity: 1;
-    
+
     animation-duration: 1s;
     animation-delay: 1s;
     animation-name: introtitel;
@@ -342,11 +341,11 @@ main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
     animation-timing-function: ease-in-out;
 }
 
-main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) h2{
+main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) h2 {
     width: 45%;
     width: 15rem;
     text-align: right;
-    }
+}
 
 main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div {
     height: 5rem;
@@ -372,7 +371,7 @@ main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
     transform: translateX(-50%);
     text-align: center;
     opacity: 1;
-    
+
     animation-duration: 1s;
     animation-delay: 2s;
     animation-name: introtitelzoo;
@@ -395,7 +394,7 @@ main > section:nth-of-type(1) > div:nth-of-type(1) > img {
     position: absolute;
     bottom: -50%;
     width: 100%;
-    
+
     animation-duration: 2s;
     animation-delay: 2s;
     animation-name: introbushes;
@@ -413,14 +412,14 @@ main > section:nth-of-type(2) > div:nth-of-type(1) {
     height: 3000px;
 }
 
-main > section:nth-of-type(2) > div:nth-of-type(1) > div {    
+main > section:nth-of-type(2) > div:nth-of-type(1) > div {
     display: grid;
-        grid-template-columns: repeat(5, 20vw);
+    grid-template-columns: repeat(5, 20vw);
     grid-template-rows: repeat(5, 20vh);
 }
 
-main > section:nth-of-type(2) > div:nth-of-type(1) > div > svg {    
-        grid-column: 3;
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > svg {
+    grid-column: 3;
     grid-row: 1 / -1;
     width: 50rem;
     align-self: center;
@@ -436,23 +435,23 @@ main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1) {
     grid-row: 4;
     justify-self: end;
     margin-top: 2.5rem;
-/*    transform: translate(-100vw, 0px);*/
+    /*    transform: translate(-100vw, 0px);*/
     opacity: 0;
-     transition: .5s;
+    transition: .5s;
 }
 
 main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2) {
-grid-column: 2/4;
+    grid-column: 2/4;
     grid-row: 4;
     align-self: end;
     justify-self: center;
-/*    transform: translate(-100vw, 0px);*/
+    /*    transform: translate(-100vw, 0px);*/
     opacity: 0;
-     transition: .5s;
+    transition: .5s;
 }
 
-main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1).darkmode, 
-main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2).darkmode{
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1).darkmode,
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2).darkmode {
     display: none;
 }
 
@@ -474,9 +473,9 @@ main > section:nth-of-type(2) #Nose.artappear,
 main > section:nth-of-type(2) #Snorharen_Group_1.artappear,
 main > section:nth-of-type(2) #Snorharen_Group_2.artappear,
 main > section:nth-of-type(2) #Mouth.artappear,
-main > section:nth-of-type(2) #Zoo.artappear, 
-main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1).artappear, 
-main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2).artappear{
+main > section:nth-of-type(2) #Zoo.artappear,
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1).artappear,
+main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2).artappear {
     opacity: 1;
     transition: .5s;
 }
@@ -496,18 +495,18 @@ main > section:nth-of-type(2) #Zoo.darkmode {
     0% {
         fill: inherit;
     }
-    
+
     50% {
         fill: black;
     }
-    
+
     100% {
-       fill: #ffdd00; 
+        fill: #ffdd00;
     }
 }
 
 main > section:nth-of-type(2) #Oneven_4.darkmode,
-main > section:nth-of-type(2) #Oneven_5.darkmode{
+main > section:nth-of-type(2) #Oneven_5.darkmode {
     animation-name: ogenanimatie;
     animation-delay: 1s;
     animation-duration: 2s;
@@ -548,7 +547,7 @@ main > section:nth-of-type(2) #Oneven_6,
 main > section:nth-of-type(2) #Oneven_7,
 main > section:nth-of-type(2) #Oneven_8,
 main > section:nth-of-type(2) #Oneven_9,
-main > section:nth-of-type(2) #Oneven_10, 
+main > section:nth-of-type(2) #Oneven_10,
 main > section:nth-of-type(2) #Oneven_11,
 main > section:nth-of-type(2) #Oneven_12,
 main > section:nth-of-type(2) #Oneven_13,
@@ -556,9 +555,9 @@ main > section:nth-of-type(2) #Oneven_14,
 main > section:nth-of-type(2) #Oneven_15,
 main > section:nth-of-type(2) #Oneven_16,
 main > section:nth-of-type(2) #Oneven_17,
-main > section:nth-of-type(2) #Oneven_18{
+main > section:nth-of-type(2) #Oneven_18 {
     transform: translate(0vw, 0px);
-    transform-origin:center;
+    transform-origin: center;
     transition: .5s;
 }
 
@@ -586,7 +585,7 @@ main > section:nth-of-type(2) #Oneven_8:hover,
 main > section:nth-of-type(2) #Oneven_9:hover,
 main > section:nth-of-type(2) #Oneven_10:hover,
 main > section:nth-of-type(2) #Oneven_11:hover,
-main > section:nth-of-type(2) #Oneven_12:hover{
+main > section:nth-of-type(2) #Oneven_12:hover {
     fill: #FDE7D8;
     transform: translate(2vw, 0px);
 }
@@ -595,11 +594,11 @@ main > section:nth-of-type(2) #Oneven_12:hover{
     0% {
         transform: translate(0vw, 0px);
     }
-    
+
     50% {
         transform: translate(-1vw, 0px);
     }
-    
+
     100% {
         transform: translate(0vw, 0px);
     }
@@ -609,11 +608,11 @@ main > section:nth-of-type(2) #Oneven_12:hover{
     0% {
         transform: translate(0vw, 0px);
     }
-    
+
     50% {
         transform: translate(1vw, 0px);
     }
-    
+
     100% {
         transform: translate(0vw, 0px);
     }
@@ -623,11 +622,11 @@ main > section:nth-of-type(2) #Oneven_12:hover{
     0% {
         transform: translate(0vw, 0vw);
     }
-    
+
     50% {
         transform: translate(0vw, -1vw);
     }
-    
+
     100% {
         transform: translate(0vw, 0vw);
     }
@@ -637,24 +636,24 @@ main > section:nth-of-type(2) #Oneven_12:hover{
     0% {
         transform: translate(0vw, 0vw);
     }
-    
+
     50% {
         transform: translate(0vw, 1vw);
     }
-    
+
     100% {
         transform: translate(0vw, 0vw);
     }
 }
 
- main > section:nth-of-type(2) #Oneven_13.staartanimation,
+main > section:nth-of-type(2) #Oneven_13.staartanimation,
 main > section:nth-of-type(2) #Oneven_15.staartanimation {
     animation-name: staart-animation-links;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
- 
+
 main > section:nth-of-type(2) #Oneven_14.staartanimation {
     animation-name: staart-animation-rechts;
     animation-duration: 2s;
@@ -687,25 +686,25 @@ main > section:nth-of-type(2) #Oneven.darkmode {
 /*---------------------------------- GIRAFFE MODE ----------------------------------*/
 
 @keyframes giraffeanimation {
-  0% {
-   transform: rotate(30deg);
-      opacity: 0;
-  }
+    0% {
+        transform: rotate(30deg);
+        opacity: 0;
+    }
 
-  100% {
-    transform: rotate(0deg);
-      opacity: 1;
-  }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
 }
 
 @keyframes londonundergroundanimation {
-  0% {
-   transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
 
-  100% {
-    transform: rotate(-180deg);
-  }
+    100% {
+        transform: rotate(-180deg);
+    }
 }
 
 main > section:nth-of-type(2) #London_underground:hover {
@@ -714,7 +713,7 @@ main > section:nth-of-type(2) #London_underground:hover {
 }
 
 main > section:nth-of-type(2) #London_underground {
-        transform-origin: 55.8% 57.5%;
+    transform-origin: 55.8% 57.5%;
 }
 
 main > section:nth-of-type(2) #London_underground.giraffeanimation {
@@ -741,19 +740,19 @@ main > section:nth-of-type(2) #Giraffe.giraffeanimation {
 
 /*---------------------------------- NOSE MODE ----------------------------------*/
 
-@keyframes noseanimation{
+@keyframes noseanimation {
     0% {
-         transform: translate(0vw, 0px);
+        transform: translate(0vw, 0px);
     }
-    
+
     50% {
-         transform: translate(-1vw, 0px);
+        transform: translate(-1vw, 0px);
     }
-    
-     100% {
-         transform: translate(0vw, 0px);
+
+    100% {
+        transform: translate(0vw, 0px);
     }
-    
+
 }
 
 main > section:nth-of-type(2) #Nose.nosemode {
@@ -765,12 +764,12 @@ main > section:nth-of-type(2) #Nose.nosemode {
 }
 
 main > section:nth-of-type(2) #Snorharen_Group_1 {
-        transform: translate(0vw, 0px) rotate(0deg);
+    transform: translate(0vw, 0px) rotate(0deg);
     transition: .5s
 }
 
 main > section:nth-of-type(2) #Snorharen_Group_2 {
-        transform: translate(0vw, 0px) rotate(0deg);
+    transform: translate(0vw, 0px) rotate(0deg);
     transition: .5s
 }
 
@@ -783,11 +782,11 @@ main > section:nth-of-type(2) #Snorharen_Group_2.nosemode {
 }
 
 main > section:nth-of-type(2) > div:nth-of-type(1) > div > div {
-        width: 0rem;
+    width: 0rem;
     height: 0rem;
     background-color: #ffdd00;
     border-radius: 100%;
-    
+
     grid-column: 3;
     grid-row: 2;
     align-self: center;
@@ -797,7 +796,7 @@ main > section:nth-of-type(2) > div:nth-of-type(1) > div > div {
 }
 
 main > section:nth-of-type(2) > div:nth-of-type(1) > div > div.nosemode {
-        width: 25rem;
+    width: 25rem;
     height: 25rem;
 }
 
@@ -808,7 +807,7 @@ main > section:nth-of-type(2) > div:nth-of-type(1) > div > div.nosemode {
     0% {
         transform: rotate(0deg);
     }
-    
+
     100% {
         transform: rotate(-360deg);
     }
@@ -818,7 +817,7 @@ main > section:nth-of-type(2) > div:nth-of-type(1) > div > div.nosemode {
     0% {
         transform: rotate(0deg);
     }
-    
+
     100% {
         transform: rotate(360deg);
     }
@@ -829,14 +828,14 @@ main > section:nth-of-type(2) #Zoo1 {
 }
 
 main > section:nth-of-type(2) #Zoo2 {
-   transform-origin: 55.8% 78.2%;
+    transform-origin: 55.8% 78.2%;
 }
 
 main > section:nth-of-type(2) #Zoo1.zoorotationlinks {
     animation-name: zoo-rotation-links;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;  
+    animation-timing-function: ease-out;
 }
 
 main > section:nth-of-type(2) #Zoo2.zoorotationlinks {
@@ -850,7 +849,7 @@ main > section:nth-of-type(2) #Zoo1.zoorotationrechts {
     animation-name: zoo-rotation-rechts;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;  
+    animation-timing-function: ease-out;
 }
 
 main > section:nth-of-type(2) #Zoo2.zoorotationrechts {
@@ -883,174 +882,183 @@ main > section:nth-of-type(2) #Oneven {
 
 /*---------------------------------- MEDIA QUERIES ----------------------------------*/
 
-@media screen and (max-width: 25em) {
-    
+@media screen and (max-width: 25rem) {
+
     /*- HEADER -*/
     body > header div:nth-of-type(1) {
         text-align: center;
     }
-    
+
     body > header div:nth-of-type(1) img {
         margin-bottom: .5rem;
-            display: block;
-    margin-left: auto;
-    margin-right: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
-    
-    /*- INTROSECTION -*/
-    
-    @keyframes introtitelmobiel {
-  from {
-   
-      opacity: 0;
-  }
 
-  to {
-    
-      opacity: 1;
-  }
-}
-    
-  main > section:nth-of-type(1) > div:nth-of-type(1) > img {
-    width: 200%;
-  }
-    
+    /*- INTROSECTION -*/
+
+    @keyframes introtitelmobiel {
+        from {
+
+            opacity: 0;
+        }
+
+        to {
+
+            opacity: 1;
+        }
+    }
+
+    main > section:nth-of-type(1) > div:nth-of-type(1) > img {
+        width: 200%;
+    }
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(2) {
         width: 200%;
-    display: block;
+        display: block;
         right: 0;
-}
-    
+    }
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
-    flex-wrap: wrap;
-    text-align: center;
-    width: auto;
-    flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        width: auto;
+        flex-direction: column;
         animation-name: introtitelmobiel;
     }
-    
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) h2 {
         width: auto;
-    text-align: center;
+        text-align: center;
     }
-    
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div {
-    height: .3rem;
-    width: 5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+        height: .3rem;
+        width: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
     }
-    
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) p {
-    width: 75%;
+        width: 75%;
     }
-    
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
-    
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) h1 {
-            font-size: 6.5rem;
+        font-size: 6.5rem;
     }
-    
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) img {
-            width: 6.5rem;
+        width: 6.5rem;
     }
-    
+
     /*- ARTWORK -*/
-    
-     main > section:nth-of-type(2) #Even {
+
+    main > section:nth-of-type(2) #Even {
         transform: translate(-150vw, 0px);
     }
-    
+
     main > section:nth-of-type(2) #Oneven {
         transform: translate(150vw, 0px);
     }
-    
+
     main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(1) {
-    display: none;
-}
+        display: none;
+    }
 
-main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2) {
-    margin-top: 0;
-    margin-bottom: 1.2rem;
-    grid-column: 3/5;
-    grid-row: 3;
-    align-self: end;
-    color: #FFF6F0;
-    justify-self: right;
+    main > section:nth-of-type(2) > div:nth-of-type(1) > div > h3:nth-of-type(2) {
+        margin-top: 5.2rem;
+        grid-column: 3/5;
+        grid-row: 3;
+        align-self: center;
+        color: #FFF6F0;
+        justify-self: right;
         pointer-events: none;
-}  
+    }
 }
 
-@media screen and (max-width: 45em) {
-    
+@media screen and (max-width: 45rem) {
+
     /*- HEADER -*/
     body > header div:nth-of-type(1) {
         text-align: center;
     }
-    
+
     body > header div:nth-of-type(1) img {
         margin-bottom: .5rem;
-            display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-      @keyframes introtitelmobiel {
-  from {
-   
-      opacity: 0;
-  }
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-  to {
-    
-      opacity: 1;
-  }
-}
-    
+    @keyframes introtitelmobiel {
+        from {
+
+            opacity: 0;
+        }
+
+        to {
+
+            opacity: 1;
+        }
+    }
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
-    flex-wrap: wrap;
-    text-align: center;
-    width: auto;
-    flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        width: auto;
+        flex-direction: column;
         animation-name: introtitelmobiel;
     }
-    
+
     main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) h2 {
         width: auto;
-    text-align: center;
+        text-align: center;
     }
-    
-    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div {
-    height: .3rem;
-    width: 5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    }
-    
-    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) p {
-    width: 75%;
-    }
-    
-    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    }
-    
-    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) h1 {
-            font-size: 6.5rem;
-    }
-    
-    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) img {
-            width: 6.5rem;
-    }
-    
-}
 
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div {
+        height: .3rem;
+        width: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) p {
+        width: 75%;
+    }
+
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) h1 {
+        font-size: 6.5rem;
+    }
+
+    main > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) img {
+        width: 6.5rem;
+    }
+
+    /*
+     main > section:nth-of-type(2) #Even {
+        transform: translate(-150vw, 0px);
+    }
+
+    main > section:nth-of-type(2) #Oneven {
+        transform: translate(150vw, 0px);
+    }
+*/
+
+}
